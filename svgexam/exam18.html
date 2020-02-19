@@ -6,16 +6,19 @@
 		<style>
 			rect {
 				fill:red;
+			}
+			.box {
 				stroke:blue;
 				stroke-width:10px;
 			}
 		</style>
 	</head>
-	<!-- 15는 인라인 방식 exam 16은 전역적인 방식으로 한 것 -->
 	<body>
-		<h1>스타일을 CSS로 지정</h1>
-		<svg>
+		<h1>CSS 클래스로 지정</h1>
+		<svg style="border:1px solid red">
 			<rect x="30" y="20" width="200" height="100" />
+			<rect x="80" y="70" width="200" height="100" class="box" />
+			<rect x="130" y="120" width="200" height="100" class="box" />
 		</svg>
 	</body>
 </html>
