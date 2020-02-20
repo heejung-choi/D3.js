@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>도라에몽</title>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+<h1>도라에몽</h1>
+<svg width="300" height="300">
+  <!-- 얼굴테두리 그리기 -->
+  <circle id="face" cx="160" cy="120" r="100" 
+    fill="#87ceeb" stroke="black" stroke-width="5" />
+     
+    <!-- 입테두리 -->
+    <ellipse cx="160" cy="145" rx="80" ry="67" 
+    fill="white" stroke="black" stroke-width="2" />
+    
+    <!-- 왼쪽 눈 테두리 -->
+   <ellipse cx="135" cy="65" rx="25" ry="28" 
+    fill="white" stroke="black" stroke-width="2" />
+    <!-- 오른쪽 눈 테두리 -->
+    <ellipse cx="188" cy="65" rx="25" ry="28" 
+    fill="white" stroke="black" stroke-width="2" />
+    
+    <!-- 왼쪽 눈알 --> 
+    <ellipse cx="148" cy="65" rx="8" ry="10" 
+    fill="black" stroke-width="2" />
+    <!-- 오른쪽 눈알 --> 
+    <ellipse cx="175" cy="65" rx="8" ry="10" 
+    fill="black" stroke-width="2" />
+    
+    
+     <!-- 왼쪽 볼 --> 
+    <ellipse cx="110" cy="100" rx="22" ry="5" 
+    fill="pink" stroke-width="2"  opacity="0.75"/>
+    <!-- 오른쪽 볼 --> 
+    <ellipse cx="210" cy="100" rx="22" ry="5" 
+    fill="pink" stroke-width="2"  opacity="0.75"/>
+    
+    
+    <!-- 왼쪽 눈알 안에 흰점 --> 
+    <ellipse cx="148.5" cy="64" rx="2" ry="3" 
+    fill="white" />
+    <!-- 오른쪽 눈알 안에 흰점 --> 
+    <ellipse cx="175.5" cy="64" rx="2" ry="3" 
+    fill="white" />
+    
+    <!-- 수염 가로 -->
+    <line x1="160" y1="100" x2="160" y2="160" 
+   stroke-width="1" stroke="black"/>
+   
+   <!-- 1번째 수염 -->
+   <line x1="110" y1="110" x2="155" y2="120" 
+   stroke-width="1" stroke="black"/>
+   <line x1="165" y1="120" x2="210" y2="110" 
+   stroke-width="1" stroke="black"/>   
+   <!-- 2번째 수염 -->
+   <line x1="110" y1="130" x2="155" y2="130" 
+   stroke-width="1" stroke="black"/>
+   <line x1="165" y1="130" x2="210" y2="130" 
+   stroke-width="1" stroke="black"/>   
+    <!-- 3번째 수염 -->
+   <line x1="110" y1="150" x2="155" y2="140" 
+   stroke-width="1" stroke="black"/>
+    <line x1="165" y1="140" x2="210" y2="150" 
+   stroke-width="1" stroke="black"/>
+    
+    <!-- 빨간코 -->
+    <circle cx="160" cy="90" r="12" 
+    fill="red" stroke="black" stroke-width="2" />
+    <!--  빨간코 흰점 -->
+    <circle cx="160" cy="85" r="3" 
+    fill="white" />     
+	
+	<!-- 입 -->
+	<path d="M110,165 Q160,210 210,165" 
+    fill="white" stroke="black" stroke-width="2" stroke-linecap="round" />
+</svg>
+<script>
+	var timer,r,g,b;
+
+window.onload=function() {
+		  setInterval(function(){ 
+			  r = Math.round(Math.random() * 255); 
+			  g = Math.round(Math.random() * 255); 
+			  b = Math.round(Math.random() * 255); 
+			  d3.select("#face").transition().style("fill", "rgb(" + r + "," + g + "," + b + ")"); 
+			  }, 500);
+		}	 
+
+</script>
+
+</body>
+
+</html>
