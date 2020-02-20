@@ -18,8 +18,10 @@ d3.csv("cities.csv", function(data) {
 	console.log(d3.min(data, function (el) {return +el.population}));	
 	console.log(d3.max(data, function (el) {return +el.population }));	
 	console.log(d3.mean(data, function (el) {return +el.population }));	
+	console.log(d3.extent(data, function (el) {return +el.population}));
+	/* extent: 주어진 데이터에서의 최솟값, 최댓값을 반환 */
 });
-console.log(d3.extent(data, function (el) {return +el.population}));	
+
 
 
 </script>
